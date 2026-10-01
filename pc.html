@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MUFI PC BUILDER</title>
+
+    <link rel="stylesheet" href="pc.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            🖥️ MUFI PC BUILDER
+        </div>
+
+        <p>
+            Build PC Impianmu
+        </p>
+
+    </header>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <button onclick="scrollToBuilder()">
+            🛠️ PC Builder
+        </button>
+
+        <button onclick="scrollToSummary()">
+            📋 Ringkasan
+        </button>
+
+        <button onclick="resetBuild()">
+            🔄 Reset
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Rakit PC
+                <span>Impianmu</span>
+            </h1>
+
+            <p>
+                Pilih komponen PC sesuai kebutuhan
+                dan lihat total harga secara otomatis.
+            </p>
+
+            <button
+                class="hero-button"
+                onclick="scrollToBuilder()">
+
+                Mulai Rakit PC
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BUILDER -->
+    <main class="container" id="builder">
+
+        <section class="builder-section">
+
+            <div class="section-title">
+
+                <h2>
+                    🛠️ Pilih Komponen
+                </h2>
+
+                <p>
+                    Tentukan komponen untuk PC kamu
+                </p>
+
+            </div>
+
+
+            <!-- PROCESSOR -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    🧠
+                </div>
+
+                <div class="component-info">
+
+                    <label for="processor">
+                        Processor
+                    </label>
+
+                    <select id="processor">
+                        <option value="0">
+                            -- Pilih Processor --
+                        </option>
+
+                        <option value="2500000">
+                            Ryzen 5 5600 - Rp 2.500.000
+                        </option>
+
+                        <option value="3500000">
+                            Ryzen 5 7600 - Rp 3.500.000
+                        </option>
+
+                        <option value="4500000">
+                            Ryzen 7 7700 - Rp 4.500.000
+                        </option>
+
+                        <option value="5200000">
+                            Core i5 14600K - Rp 5.200.000
+                        </option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOTHERBOARD -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    🔲
+                </div>
+
+                <div class="component-info">
+
+                    <label for="motherboard">
+                        Motherboard
+                    </label>
+
+                    <select id="motherboard">
+
+                        <option value="0">
+                            -- Pilih Motherboard --
+                        </option>
+
+                        <option value="1800000">
+                            MSI B550M - Rp 1.800.000
+                        </option>
+
+                        <option value="2500000">
+                            ASUS B650M - Rp 2.500.000
+                        </option>
+
+                        <option value="3200000">
+                            MSI B760M - Rp 3.200.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- RAM -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    💾
+                </div>
+
+                <div class="component-info">
+
+                    <label for="ram">
+                        RAM
+                    </label>
+
+                    <select id="ram">
+
+                        <option value="0">
+                            -- Pilih RAM --
+                        </option>
+
+                        <option value="700000">
+                            8GB DDR4 - Rp 700.000
+                        </option>
+
+                        <option value="1200000">
+                            16GB DDR4 - Rp 1.200.000
+                        </option>
+
+                        <option value="1800000">
+                            32GB DDR4 - Rp 1.800.000
+                        </option>
+
+                        <option value="2200000">
+                            16GB DDR5 - Rp 2.200.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- GPU -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    🎮
+                </div>
+
+                <div class="component-info">
+
+                    <label for="gpu">
+                        Graphics Card / GPU
+                    </label>
+
+                    <select id="gpu">
+
+                        <option value="0">
+                            -- Pilih GPU --
+                        </option>
+
+                        <option value="3500000">
+                            RTX 3060 - Rp 3.500.000
+                        </option>
+
+                        <option value="5000000">
+                            RTX 4060 - Rp 5.000.000
+                        </option>
+
+                        <option value="7000000">
+                            RTX 4070 - Rp 7.000.000
+                        </option>
+
+                        <option value="9500000">
+                            RTX 4070 Super - Rp 9.500.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- SSD -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    💿
+                </div>
+
+                <div class="component-info">
+
+                    <label for="ssd">
+                        Storage / SSD
+                    </label>
+
+                    <select id="ssd">
+
+                        <option value="0">
+                            -- Pilih SSD --
+                        </option>
+
+                        <option value="600000">
+                            SSD NVMe 500GB - Rp 600.000
+                        </option>
+
+                        <option value="950000">
+                            SSD NVMe 1TB - Rp 950.000
+                        </option>
+
+                        <option value="1800000">
+                            SSD NVMe 2TB - Rp 1.800.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- PSU -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    🔌
+                </div>
+
+                <div class="component-info">
+
+                    <label for="psu">
+                        Power Supply
+                    </label>
+
+                    <select id="psu">
+
+                        <option value="0">
+                            -- Pilih PSU --
+                        </option>
+
+                        <option value="700000">
+                            500W 80+ Bronze - Rp 700.000
+                        </option>
+
+                        <option value="1000000">
+                            650W 80+ Bronze - Rp 1.000.000
+                        </option>
+
+                        <option value="1500000">
+                            750W 80+ Gold - Rp 1.500.000
+                        </option>
+
+                        <option value="2000000">
+                            850W 80+ Gold - Rp 2.000.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- CASE -->
+            <div class="component-card">
+
+                <div class="component-icon">
+                    🖥️
+                </div>
+
+                <div class="component-info">
+
+                    <label for="case">
+                        PC Case
+                    </label>
+
+                    <select id="case">
+
+                        <option value="0">
+                            -- Pilih Case --
+                        </option>
+
+                        <option value="700000">
+                            Gaming Case Basic - Rp 700.000
+                        </option>
+
+                        <option value="1200000">
+                            Gaming Case RGB - Rp 1.200.000
+                        </option>
+
+                        <option value="1800000">
+                            Premium Gaming Case - Rp 1.800.000
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- SUMMARY -->
+        <aside class="summary" id="summary">
+
+            <div class="summary-header">
+
+                <h2>
+                    📋 Build Kamu
+                </h2>
+
+                <span id="componentCount">
+                    0/7
+                </span>
+
+            </div>
+
+
+            <div id="summaryList">
+
+                <div class="empty-summary">
+
+                    🖥️
+
+                    <p>
+                        Belum ada komponen dipilih
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="total-box">
+
+                <span>
+                    TOTAL HARGA
+                </span>
+
+                <strong id="totalPrice">
+                    Rp 0
+                </strong>
+
+            </div>
+
+
+            <button
+                class="build-button"
+                onclick="buildPC()">
+
+                💻 BUILD PC
+
+            </button>
+
+
+            <button
+                class="reset-button"
+                onclick="resetBuild()">
+
+                🔄 Reset Build
+
+            </button>
+
+        </aside>
+
+    </main>
+
+
+    <!-- MODAL -->
+    <div
+        class="modal"
+        id="successModal">
+
+        <div class="modal-content">
+
+            <div class="success-icon">
+                ✅
+            </div>
+
+            <h2>
+                PC Berhasil Dibuat!
+            </h2>
+
+            <p>
+                Konfigurasi PC kamu sudah siap.
+            </p>
+
+            <strong id="modalPrice">
+                Rp 0
+            </strong>
+
+            <button onclick="closeModal()">
+                Tutup
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            🖥️ MUFI PC BUILDER
+        </p>
+
+        <span>
+            Build your dream PC.
+        </span>
+
+    </footer>
+
+
+    <script src="pc.js"></script>
+
+</body>
+
+</html>
